@@ -1,17 +1,19 @@
-{  
-  "name": "haotab",  
-  "version": "0.0.1",  
-  "description": "chrome tabs manage tools",  
-  "browser_action": {  
-    "default_icon": "icon.png" ,
-    "default_title": "haotab",
-    "default_popup": "popup.html"
-  },
-  "content_scripts":{
-    "matches":["*"],
-    "js":["js/main.js"],
-    "run_at":"document_idle"
-  },
-  "offline_enabled":true,
-  "permissions":["tabs"]
-} 
+{
+  "name": "haotab",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "tabs manage tool",
+  "content_scripts": [
+  ],
+  "offline_enabled": true,
+  "permissions":[
+    "tabs",
+    "bookmarks",
+    "unlimitedStorage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background":{
+    "scripts":["js/background.js"]
+  }
+}
