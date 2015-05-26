@@ -1,11 +1,14 @@
 {
-  "name": "haotab",
+  "name": "云标签",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "tabs manage tool",
-  "content_scripts": [
-  ],
+  "description": "打开的网页不用收藏，也能带回家！",
   "offline_enabled": true,
+  "icons":{
+    "16":"images/tab.png",
+    "48":"images/tab.png",
+    "128":"images/tab.png"
+  },
   "permissions":[
     "tabs",
     "bookmarks",
@@ -13,7 +16,14 @@
     "http://*/*",
     "https://*/*"
   ],
+  "content_scripts": [
+    
+  ],
   "background":{
     "scripts":["js/background.js"]
+  },
+  "browser_action": {
+    "default_icon": "images/tab.png",
+    "default_popup": "popup.html"
   }
 }
